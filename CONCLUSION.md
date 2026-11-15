@@ -21,7 +21,7 @@ Give the numbers before -> after for that layer (correct / wrong / no answer, ou
 whether it changed what the agent *can do* or only what it *admits*. If no layer changed the
 number of correct answers, say so and explain what the layers did change instead.
 
-(write here)
+Player one changed the results the most the of correct answers went from 16 out 24 to 18 out of 24, while wrong answers went from 4 to 6 and no answers went from 4 to 0. So before 16/4/4 and after is 18/6/0. This changed what the agent *can do* because instead of crashing on tool error it read the error message and fixed region names that were alternative, for example, 'Karagandy' and 'the city of Almaty' and the layer 2(18/6/0) changed nothing and the layer 3(18/4/2) only changed what the agent *admits* and it changed not supported wrong answers to unverified.
 
 ## 2. One failure the full harness did not fix
 
