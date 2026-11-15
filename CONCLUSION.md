@@ -30,7 +30,8 @@ Pick one question that the full harness (layer 3) still gets wrong or refuses. G
 the model do instead? Name one thing you would add to the harness, and what it would cost
 (extra model calls, tokens, time, or a new way to fail).
 
-(write here)
+The full harness still failed q18 which asked for the percentage point change CPI in Jumbyl between 2022 and 2025. In the trace the model first got 16.1% and 10.6% then it went wrong with step 2 and calculated With 16.1 - 10.6 / 100 which gave 0.055 and it answered 0.55 percentage point instead of 5.5 and It gave 'unverified' after layer 3 sent that back.
+I would add percentage point subtraction tool or maybe something for checking with formula so it does not makes a mistake with dividing by 100 but this would extra tokens every time it runs.
 
 ## 3. Workflow or agent for the monthly ranking?
 
@@ -39,7 +40,8 @@ indicator in one year". Would you ship the fixed workflow or the agent? Use the 
 number of model calls, the tokens and the time you measured in Part 1. Then say in one sentence
 what kind of question would make you choose the other one.
 
-(write here)
+I would ship the fixed workflow. so in part 1 on the 15 fixed shape questions the workflow achieved better accuracy(13/15 vs 9/15) and it used fewer model calls(15 vs 26) and its use of tokens were 5 times less(3852 vs 19835). It showed that it three times faster too(16.4 vs 50.2)
+I would choose the agent instead for open-ended questions that need several steps or maybe for looking up unfamiliar regions aliases first.
 
 ---
 
